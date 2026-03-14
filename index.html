@@ -161,13 +161,15 @@ nav {
   font-family:'Nunito',sans-serif;
   font-weight:700;
 }
-.tabs { display:flex; gap:2px; margin-left:auto; }
+.tabs { display:flex; gap:2px; margin-left:auto; flex-shrink:1; flex-wrap:nowrap; overflow-x:auto; }
 .tab {
   padding:6px 14px;
   border-radius:9999px;
   cursor:pointer;
   font-size:13px;
   font-weight:600;
+  white-space:nowrap;
+  flex-shrink:0;
   color:var(--muted);
   transition:all 0.3s ease;
 }
@@ -611,7 +613,7 @@ tr:hover td { background:var(--moss-light); border-radius:8px; }
 /* RESPONSIVE */
 @media(max-width:768px) {
   nav { top:8px; padding:0 12px; }
-  .nav-pill { padding:0 16px; height:46px; gap:4px; }
+  .nav-pill { padding:0 12px; height:46px; gap:4px; overflow:hidden; }
   .logo { font-size:15px; }
   .logo-dot { width:24px; height:24px; font-size:10px; }
   .tab { padding:5px 10px; font-size:11px; }
@@ -630,7 +632,7 @@ tr:hover td { background:var(--moss-light); border-radius:8px; }
   .moss-section { padding:24px 20px; border-radius:1.5rem; }
 }
 @media(max-width:400px) {
-  .tab { padding:4px 7px; font-size:10px; }
+  .tab { padding:4px 6px; font-size:9px; }
   .sched { grid-template-columns:36px repeat(5,1fr); }
   .sh { font-size:8px; padding:6px 1px; }
 }
