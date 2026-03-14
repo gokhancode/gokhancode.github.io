@@ -161,9 +161,9 @@ nav {
   font-family:'Nunito',sans-serif;
   font-weight:700;
 }
-.tabs { display:flex; gap:2px; margin-left:auto; flex-shrink:1; flex-wrap:nowrap; overflow-x:auto; }
+.tabs { display:flex; gap:1px; margin-left:auto; flex-shrink:1; flex-wrap:nowrap; }
 .tab {
-  padding:6px 14px;
+  padding:6px 10px;
   border-radius:9999px;
   cursor:pointer;
   font-size:13px;
@@ -616,7 +616,7 @@ tr:hover td { background:var(--moss-light); border-radius:8px; }
   .nav-pill { padding:0 12px; height:46px; gap:4px; overflow:hidden; }
   .logo { font-size:15px; }
   .logo-dot { width:24px; height:24px; font-size:10px; }
-  .tab { padding:5px 10px; font-size:11px; }
+  .tab { padding:5px 7px; font-size:11px; }
   .clock { display:none; }
   .wrap { padding:0 16px; }
   .courses { grid-template-columns:1fr; }
@@ -762,18 +762,17 @@ tr:hover td { background:var(--moss-light); border-radius:8px; }
   <div class="nav-pill">
     <div class="logo">👨🏻‍💻 ETH CS</div>
     <div class="tabs">
-      <div class="tab active" onclick="go('home')">Home</div>
-      <div class="tab" onclick="go('schedule')">Schedule</div>
+      <div class="tab active" onclick="go('home')">🏠</div>
+      <div class="tab" onclick="go('schedule')">📅</div>
       <div class="tab" onclick="go('pp')">PP</div>
       <div class="tab" onclick="go('aw')">A&P</div>
-      <div class="tab" onclick="go('an')">Analysis</div>
+      <div class="tab" onclick="go('an')">Ana</div>
       <div class="tab" onclick="go('ddca')">DDCA</div>
-      <div class="tab" style="opacity:0.4;font-size:10px;pointer-events:none;">|</div>
       <div class="tab" onclick="go('dm')">DM</div>
       <div class="tab" onclick="go('la')">LA</div>
       <div class="tab" onclick="go('ad')">A&D</div>
-      <div class="tab" onclick="go('ep')">eProg</div>
-      <div class="tab" onclick="go('res')">Resources</div>
+      <div class="tab" onclick="go('ep')">eP</div>
+      <div class="tab" onclick="go('res')">📚</div>
       <div class="tab" onclick="go('pomo')">🍅</div>
     </div>
     <div class="clock" id="clock"></div>
@@ -1541,7 +1540,7 @@ tr:hover td { background:var(--moss-light); border-radius:8px; }
 </div>
 
 <script>
-const map={home:'Home',schedule:'Schedule',pp:'PP',aw:'A&P',an:'Analysis',ddca:'DDCA',dm:'DM',la:'LA',ad:'A&D',ep:'eProg',res:'Resources',pomo:'🍅'};
+const map={home:'🏠',schedule:'📅',pp:'PP',aw:'A&P',an:'Ana',ddca:'DDCA',dm:'DM',la:'LA',ad:'A&D',ep:'eP',res:'📚',pomo:'🍅'};
 function go(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
